@@ -2,7 +2,41 @@
 Monophonic Instrument detection done with a CNN
 
 # Dataset:
-Tested on the Philharmonia dataset. Total of ~12,000 audio files. Includes a single held note for every possible note in that instruments range, for a total of 17 concert instruments. 
+Tested on the Philharmonia dataset. Total of ~12,000 audio files. Includes a single held note for every possible note in that instruments range, for a total of 17 concert instruments. Download link for the data-set can be found here: https://philharmonia.co.uk/resources/sound-samples/ by downloading the "All Instruments" set, though certain instruments from this set were omitted in our project for having significantly less samples than the rest. Our final instrument list was (with their given labels)
+
+0 : Piano
+
+1 : bass clarinet
+
+2 : bassoon
+
+3 : cello
+
+4 : clarinet
+
+5 : contrabassoon
+
+6 : english horn
+
+7 : double bass
+
+8 : flute
+
+9 : french horn
+
+10 : guitar
+
+11 : oboe
+
+12 : saxophone
+
+13 : trombone
+
+14 : trumpet
+
+15 : tuba
+
+16 : violin
 
 # Pre-processing:
 Raw audio files were normalized to the first 0.5 seconds of audio measured past a certain amplitude threshold so that they could be better standardized for NN. They were also converted into spectrograms measured on the mel scale (known as mel-spectrograms), which accounts for human distinctions in hearing at higher frequencies. Finally, we created a test/train split of 80/20. 
